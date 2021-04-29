@@ -43,7 +43,22 @@ class ProfilUpdate(models.Model):
     def __str__(self):
         return str(self.user)
 class Android_stor(models.Model):
-    titel=models.CharField(max_length=50)
-    app_category=models.CharField(max_length=50)
-    body=models.TextField()
-    image=models.ImageField(upload_to="static/profile/",default="static/Android_stor/")
+    titel=models.CharField(max_length=50,default="")
+    app_category=models.CharField(max_length=50,default="")
+    body=models.TextField(default="")
+    image=models.ImageField(upload_to="static/android_stor/",default="")
+    url=models.CharField(max_length=200,default="")
+    def __str__(self):
+        return self.titel
+class App_Category(models.Model):
+    category=models.CharField(max_length=50)
+    def __str__(self):
+        return self.category
+class AppList(models.Model):
+    lists=models.CharField(max_length=50)
+    def __str__(self):
+        return self.lists
+class Course(models.Model):
+    course_name=models.CharField(max_length=50)
+    course_body=models.TextField()
+    thumbnail=models.ImageField(upload_to="static/course_pic/",default="")

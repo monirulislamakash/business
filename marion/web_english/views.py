@@ -1,8 +1,11 @@
 from django.shortcuts import render,redirect
-from .models import Blog,Subscription,Our_team,Brand_logo,Category,Head_titel,ProfilUpdate
+from .models import Head_titel,ProfilUpdate,Android_stor,App_Category,AppList
+from .models import Blog,Subscription,Our_team,Brand_logo,Category,Course
 from django.contrib.auth.models import User
 from django.contrib import auth
 from .forms import UserForm,ProForm
+from django.contrib.auth.mixins import LoginRequiredMixin
+
 # Create your views here.
 def index(request):
     blog=Blog.objects.all()
@@ -32,8 +35,10 @@ def details_blog(request,id):
     return render(request,"details_blog.html",sendblog)
 def category(request,category):
     blog=Blog.objects.filter(category=category)
+    blogcategory=Category.objects.all()
     sendblog={
-        'blog':blog
+        'blog':blog,
+        'category':blogcategory
     }
     return render(request,"category.html",sendblog)
 def singup(request):
@@ -88,4 +93,37 @@ def updateprofile(request):
     else:
         return redirect(login)
 def android_stor(request):
-     return render(request,"android_stor.html")
+    appstor=Android_stor.objects.all()
+    appcategory=App_Category.objects.all()
+    applist=AppList.objects.all()
+    sendvar={
+        'apppost':appstor,
+        'category':appcategory,
+        'applist':applist
+    }
+    return render(request,"android_stor.html",sendvar)
+def allblog(request):
+    blog=Blog.objects.filter(category=category)
+    blogcategory=Category.objects.all()
+    blogpost=Blog.objects.all()
+    sendblog={
+        'blog':blog,
+        'category':blogcategory,
+        'blogpost':blogpost
+    }
+    return render(request,"allblog.html",sendblog)
+def searchapp(request):
+    search=request.POST.get("searchapp")
+    appstortitel=Android_stor.objects.filter(titel__icontains=search)
+    appstorbody=Android_stor.objects.filter(body__icontains=search)
+    appstor=appstortitel.union(appstorbody)
+    sendvar={
+        'apppost':appstor,
+    }
+    return render(request,"searchapp.html",sendvar)
+def android_course(request):
+    allcourse=Course.objects.all()
+    sendvar={
+        'allcourse':allcourse
+    }
+    return render(request, "android_course.html",sendvar)

@@ -34,9 +34,9 @@
     <div class="container-fluid">
     	<div class="category">
     		<ul>
-    			<li class="active_category"><a href="{% url 'blog' %}"> Letest</a></li>
+    			<li><a href="{% url 'blog' %}"> Letest</a></li>
 				{% for i in category %}
-    			<li><a href="{% url '' %}">{{i.category}}</a></li>
+    			<li><a href="{% url 'category' i.category %}">{{i.category}}</a></li>
 				{% endfor %}
     		</ul>
     	</div>

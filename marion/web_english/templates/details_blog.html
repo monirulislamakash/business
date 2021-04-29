@@ -6,6 +6,11 @@
 {% endblock  %}
 {% block title %}Home{% endblock  %}
 {% block body %}
+	<div class="progress_header">
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+    </div>
 	<!--Slider Start-->
     <div class="container-fluid blog_details_slid">
     	<div id="carouselExampleSlidesOnly" class="carousel slide container-fluid" data-bs-ride="carousel">
@@ -27,5 +32,5 @@
 	        <p class="d_blog_body">{{i.post|safe}}</p>
     	{% endfor %}
 	</div>
-    
+    <script src="{% static 'js/./script.js' %}"></script>
 {% endblock  %}

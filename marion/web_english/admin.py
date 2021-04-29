@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Blog,Subscription,Our_team,Brand_logo,Head_titel,Category,ProfilUpdate,Android_stor
+from .models import Blog,Subscription,Our_team,Brand_logo,Head_titel,Course
+from .models import Category,ProfilUpdate,Android_stor,App_Category,AppList
 # Register your models here.
 admin.site.register(Blog)
 admin.site.register(Subscription)
@@ -9,3 +10,6 @@ admin.site.register(Head_titel)
 admin.site.register(Category)
 admin.site.register(ProfilUpdate)
 admin.site.register(Android_stor)
+admin.site.register(App_Category)
+admin.site.register(AppList)
+admin.site.register(Course)

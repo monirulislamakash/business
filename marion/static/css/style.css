@@ -326,6 +326,87 @@ body{
 	height: 150px;
 	border-radius: 50%;
 }
+.android_catecory{
+	border-right:1px solid #d4d4d5;
+}
+.android_catecory ul{
+	padding-right:0px; 
+}
+.android_catecory ul li{
+    padding-top:8px;
+    padding-bottom:8px;
+    list-style: none;
+    padding-left:4px; 
+}
+.android_catecory ul a{
+	text-decoration: none;
+    color: #000;
+}
+.catecory_list{
+	border-left:1px solid #d4d4d5;
+}
+.catecory_list ul{
+	padding-left:0px; 
+}
+.catecory_list ul li{
+    padding-top:8px;
+    padding-bottom:8px;
+    list-style: none;
+    padding-left:4px; 
+    
+}
+.catecory_list ul a{
+	text-decoration: none;
+    color: #000;
+}
+.s_cata{
+	height: 34px;
+    padding: 8px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border: solid 1px #d4d4d5;
+    outline: none;
+    width: 135px;
+    font-size: 14px;
+}
+.s_btn{
+    height: 34px;
+    border: none;
+    width: 69px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background: #6435c9;
+    color: #fff;
+    font-size: 15px;
+}
+.auth_button{
+	
+}
+.course{
+	width:80%;
+	margin:0 auto;
+}
+.progress_header{
+  position: fixed;
+  top: 9%;
+  z-index: 1;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+.progress-container {
+  width: 100%;
+  height: 5px;
+  background:#ccc0;
+}
+
+.progress-bar {
+  height: 5px;
+  background: #6435c9;
+  width: 0%;
+}
+
+
 
 
 /* Responsive Sections*/
