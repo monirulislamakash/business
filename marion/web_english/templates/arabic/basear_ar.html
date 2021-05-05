@@ -47,30 +47,30 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{% url 'web_arabic_home' %}">Home</a>
+            <a class="nav-link active" aria-current="page" href="{% url 'web_arabic_home' %}">منزل، بيت</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{% url 'web_arabic_blog' %}">Blog</a>
+            <a class="nav-link active" aria-current="page" href="{% url 'web_arabic_blog' %}">مدونة او مذكرة</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{% url 'web_arabic_android_stor' %}">Android Store</a>
+            <a class="nav-link active" aria-current="page" href="{% url 'web_arabic_android_stor' %}">متجر أندرويد</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link active" aria-current="page"  href="{% url 'web_arabic_android_course' %}">Android Courses</a>
+            <a class="nav-link active" aria-current="page"  href="{% url 'web_arabic_android_course' %}">دورات Android</a>
             </li>
             <li class="nav-item dropdown" >
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <img src="{{request.user.profilupdate.image.url}}" style="width:30px;height:30px; border-radius:50px;">
               </a>
               <ul class="profile_image dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="{% url 'web_arabic_profile' %}">Profile</a></li>
-                <li><a class="dropdown-item" href="#">Post</a></li>
-                <li><a class="dropdown-item" href="{% url 'web_arabic_logout' %}">Logout</a></li>
+                <li><a class="dropdown-item" href="{% url 'web_arabic_profile' %}">الملف الشخصي</a></li>
+                <li><a class="dropdown-item" href="#">بريد</a></li>
+                <li><a class="dropdown-item" href="{% url 'web_arabic_logout' %}">تسجيل خروج</a></li>
               </ul>
             </li>
         </ul>
         </div>
-        <a class="navbar-brand ms-auto" href="{% url 'home' %}">Navbar</a>
+        <a class="navbar-brand ms-auto" href="{% url 'home' %}">النبار</a>
     </div>
     </nav>
     {% else %}
@@ -82,26 +82,26 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{% url 'web_arabic_home' %}">Home</a>
+            <a class="nav-link active" aria-current="page" href="{% url 'web_arabic_home' %}">منزل، بيت</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{% url 'web_arabic_blog' %}">Blog</a>
+            <a class="nav-link active" aria-current="page" href="{% url 'web_arabic_blog' %}">مدونة او مذكرة</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{% url 'web_arabic_android_stor' %}">Android Store</a>
+            <a class="nav-link active" aria-current="page" href="{% url 'web_arabic_android_stor' %}">متجر أندرويد</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link active" aria-current="page"  href="{% url 'web_arabic_android_course' %}">Android Courses</a>
+            <a class="nav-link active" aria-current="page"  href="{% url 'web_arabic_android_course' %}">دورات Android</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link login_button" data-bs-toggle="modal" data-bs-target="#exampleModal_login" href="#">Login</a>
+                <a class="nav-link login_button" data-bs-toggle="modal" data-bs-target="#exampleModal_login" href="#">تسجيل الدخول</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link login_button" data-bs-toggle="modal" data-bs-target="#exampleModal_singup" href="Singup">SingUp</a>
+                <a class="nav-link login_button" data-bs-toggle="modal" data-bs-target="#exampleModal_singup" href="Singup">التسجيل</a>
             </li>
         </ul>
         </div>
-        <a class="navbar-brand ms-auto" href="{% url 'home' %}">Navbar</a>
+        <a class="navbar-brand ms-auto" href="{% url 'home' %}">النبار</a>
     </div>
     </nav>
     {% endif %}
@@ -113,7 +113,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+            <h5 class="modal-title" id="exampleModalLabel">تسجيل الدخول</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -136,7 +136,7 @@
                 <a style="font-size:25px; color:#ec4302; padding:5px;" href="{% url 'social:begin' 'facebook' %}"> <ion-icon name="logo-google"></ion-icon></a>
             </div>
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary">Login</button>
+            <button type="submit" class="btn btn-primary">تسجيل الدخول</button>
           </div>
           </form>
         </div>
@@ -149,7 +149,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Register</h5>
+            <h5 class="modal-title" id="exampleModalLabel">يسجل</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -192,7 +192,7 @@
                 <a style="font-size:25px; color:#ec4302; padding:5px;" href="{% url 'social:begin' 'facebook' %}"> <ion-icon name="logo-google"></ion-icon></a>
             </div>
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary">Register</button>
+            <button type="submit" class="btn btn-primary">يسجل</button>
           </div>
           </form>
         </div>

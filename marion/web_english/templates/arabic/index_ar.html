@@ -29,15 +29,15 @@
     <!--Content Start-->
     <div class="container">
     	<div class="content_titel col-sm-12">
-    		Learn Android App Development
+    		تطوير تطبيقات
     	</div>
 
     	<div class="content_sub_titel col-sm-12">
-    		Millions of developers are learning at MindOrks
+    		الملايين من المطورين يتعلمون الكثير
     	</div>
 
         <div class="content_head col-sm-12">
-    		<h4>Android Development Courses</h4>
+    		<h4>دورات تطوير Android</h4>
     	</div>
     	<!--Contant body Start-->
         <div class="content">
@@ -85,7 +85,7 @@
 
     	<!--Contant body end-->
     	<h4 class="blog_head">
-    		Featured Blogs on Android App Development
+    		المدونات المميزة وتطوير تطبيقات Android
     	</h4>
     </div>
     </div>
@@ -115,7 +115,7 @@
     	
     <!--Content End-->
         <div style="height: 100px; width: 300px; margin-top:10px;margin:0 auto; text-align: center;">
-          <a href="{% url 'allblog' %}"><button style="margin-top: 20px;background: #6435c9;width: 200px;height: 50px;color: #fff;border-radius: 16px;border: none;">See more</button></a>
+          <a href="{% url 'allblog' %}"><button style="margin-top: 20px;background: #6435c9;width: 200px;height: 50px;color: #fff;border-radius: 16px;border: none;">شاهد المزيد</button></a>
         </div>
 	<!--Subscription Start-->
 	<div class="Subscription">
@@ -123,20 +123,20 @@
 			<img src="{% static 'web-templates-titan.jpg' %}">
 		</div>
 		<div class="Subscription_input">
-			<h5>MindOrks Newsletter</h5>
-			<p>A free weekly newsletter that comes with the latest articles on Android App Development, open source projects, events and useful discussions.</p><br><br>
-			<h5>Subscribe Now</h5><br>
-			<p>A must have weekly newsletter to become a complete Android developer.</p>
+			<h5>رسالة إخبارية Mindorx</h5>
+			<p>نشرة إخبارية أسبوعية مجانية تحتوي على أحدث المقالات وتطوير تطبيقات Android ومشاريع مفتوحة المصدر وأحداث ومناقشات مفيدة.</p><br><br>
+			<h5>إشترك الآن</h5><br>
+			<p>النشرة الإخبارية الأسبوعية لـ Most Have هو مطور Android كامل.</p>
 			<form method="POST">
 			{% csrf_token %}
-				<input type="email" name="Subscription_email" placeholder="Your Email"><button type="submit">Subscribe</button>
+				<input type="email" name="Subscription_email" placeholder="بريدك الالكتروني"><button type="submit">الإشتراك</button>
 			</form>
 		</div>
 	</div>
 	<!--Subscription End-->
 	<!--Our tem Start-->
 	<div class="our_tem col-lg-12 col-md-12">
-		<h1 align="center">Our Team</h1>
+		<h1 align="center">فريقنا</h1>
 		<div class="row">
 		{% for our_team in team %}
 			<div class="col-lg-4 col-md-4 col-sm-12 our_tem_cade" style="background: #fff;height: 300px;">

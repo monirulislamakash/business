@@ -165,13 +165,14 @@ body{
 .date_time{
 	background: #fff;
 }
-.login_button{
-	background:#6435c9;
-	border-radius: 27px;
+.login_button {
+    background: #6435c9;
+    border-radius: 27px;
     color: #fff !important;
-    width: 88px;
+    width: 95%;
     text-align: center;
-    margin-right: 7px;
+    margin-right: 11px;
+    margin-left: 11px;
 }
 .d_blog{
 	width: 60%;
