@@ -59,13 +59,16 @@
             <li class="nav-item">
             <a class="nav-link active" aria-current="page"  href="{% url 'android_course' %}">Android Courses</a>
             </li>
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page"  href="{% url 'web_arabic_home' %}">Translate</a>
+            </li>
             <li class="nav-item dropdown" >
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <img src="{{request.user.profilupdate.image.url}}" style="width:30px;height:30px; border-radius:50px;">
               </a>
               <ul class="profile_image dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="{% url 'profile' %}">Profile</a></li>
-                <li><a class="dropdown-item" href="#">Post</a></li>
+                <li><a class="dropdown-item" href="{% url 'web_arabic_home' %}">Post</a></li>
                 <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
               </ul>
             </li>
@@ -99,6 +102,9 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link login_button" data-bs-toggle="modal" data-bs-target="#exampleModal_singup" href="Singup">SingUp</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link login_button" aria-current="page"  href="{% url 'web_arabic_home' %}">Translate</a>
             </li>
         </ul>
         </div>

@@ -11,14 +11,16 @@
     	<div id="carouselExampleSlidesOnly" class="carousel slide container-fluid" data-bs-ride="carousel">
         <div class="carousel-inner" >
             <div class="carousel-item active ">
+            {% for sliderhead in sliderhead %}
                 <div class="slide_left">
-                	<h1>Android Courses</h1>
-                	<div style="font-size:24px;color:#e5e5e5" class="sub header">A complete guide for learning Android App development</div>
+                	<h1>{{sliderhead.titel}}</h1>
+                	<div style="font-size:24px;color:#e5e5e5" class="sub header">{{sliderhead.subtitel}}</div>
 					<button>Check Now</button>
                 </div>
                 <div class="slide_right">
-                	<img src="{% static 'sliderimags.png' %}">
+                	<img src="{{sliderhead.slide_image}}">
                 </div>
+			{% endfor %}
             </div>
         </div>
         </div>

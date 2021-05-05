@@ -1,5 +1,5 @@
 body{
-	font-family:arial;
+	font-family:Roboto,Helvetica Neue,Arial,Helvetica,sans-serif;
 }
 .slider{
 	width:100%;
@@ -316,7 +316,7 @@ body{
 .profile_slider{
 	width:100%;
 	height: 60vh;
-	background: linear-gradient(90deg,#11209f,#b800de 50%,#f5a623);
+	background: linear-gradient(90deg,#11209f,#b800de 50%,#f5a623) !important;
 	color: #fff;
 	padding: 50px;
 	margin-bottom:30px;
@@ -405,7 +405,14 @@ body{
   background: #6435c9;
   width: 0%;
 }
-
+.course_slider{
+	width:100%;
+	height: 37vh;
+	background: linear-gradient(90deg,#11209f,#b800de 50%,#f5a623);
+	color: #fff;
+	padding: 50px;
+	margin-bottom:30px;
+}
 
 
 

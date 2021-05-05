@@ -1,0 +1,100 @@
+{% extends 'arabic/basear_ar.html' %}
+{% load static %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+{% endblock  %}
+{% block title %}Android Course{% endblock  %}
+{% block body %}
+    <!--Slider Start-->
+    <div class="container-fluid course_slider">
+    	<div id="carouselExampleSlidesOnly" class="carousel slide container-fluid" data-bs-ride="carousel">
+        <div class="carousel-inner" >
+            <div class="carousel-item active ">
+                <div align="center">
+                	<h1>Android App Development Online Course</h1><br>
+                	<h4>Check our online courses on Android App Development</h4><br>
+				</div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!--Slider End-->
+    <!--Content Start-->
+    <div class="container">
+    	<div class="content_titel col-sm-12">
+    		Learn Android App Development
+    	</div>
+
+    	<div class="content_sub_titel col-sm-12">
+    		Millions of developers are learning at MindOrks
+    	</div>
+
+        <div class="content_head col-sm-12">
+    		<h4>Android Development Courses</h4>
+    	</div>
+    	<!--Contant body Start-->
+        <div class="content">
+			{% for contant in contant_1 %}
+        	<div class="content_1">
+        		<h2>{{contant.titel}}</h2>
+        		<p>{{contant.subtitel}}</p>
+        		<span>{{contant.subtitle2}}</span><br>
+        		<div class="Spantext" style="float:left;  margin-top:25px;">
+        			<img src="{{contant.image1}}" style="width:50px;height:50px;border-radius:50px; background: #999;">
+        			<img src="{{contant.image2}}" style="width:50px;height:50px;border-radius:50px; background: #999;">
+        		</div><br>
+        		
+        		<div class="Spantext" style="margin-left:35%;">
+        			{{contant.positons}}<br>
+        			{{contant.name1}}, {{contant.name2}}
+        		</div><br>
+        		
+        		<a href="{{contant.button_url}}"><button>Explor Now</button></a>
+        	</div>
+			{% endfor %}
+			{% for contant in contant_2 %}
+        	<div class="content_2">
+        		<h2>{{contant.titel}}</h2>
+        		<p>{{contant.subtitel}}</p>
+        		<span>{{contant.subtitle2}}</span><br>
+        		<div class="Spantext" style="float:left;  margin-top:25px;">
+        			<img src="{{contant.image1}}" style="width:50px;height:50px;border-radius:50px; background: #999;">
+        			<img src="{{contant.image2}}" style="width:50px;height:50px;border-radius:50px; background: #999;">
+        		</div><br>
+        		
+        		<div class="Spantext" style="margin-left:35%;">
+        			{{contant.positons}}<br>
+        			{{contant.name1}}, {{contant.name2}}
+        		</div><br>
+        		
+        		<a href="{{contant.button_url}}"><button>Explor Now</button></a>
+        	</div>
+			{% endfor %}
+        </div>
+
+        <!--clear body Start-->
+        <div class="clear"></div>
+        <!--clear body end-->
+
+    	<!--Contant body end-->
+        <!---->
+        <div class="course">
+        <h3 class="blog_head">
+    		A complete guide for learning development
+    	</h3>
+        {% for allcourse in allcourse %}
+   			<a href="" style="text-decoration: none; color: #000;">
+	    		<div class="card mt-3" style="width:30rem;margin:0 auto;">
+                <img src="{{allcourse.thumbnail}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 class="card-title">{{allcourse.course_name}}</h4>
+                    <p class="card-text mb-3  mt-3">{{allcourse.course_body}}</p>
+                    <a href="#" class="btn btn" style="float:right;width:150px; background:#6435c9;color:#fff;">Buy Now</a>
+                </div>
+                </div>
+			</a>
+        {% endfor %} 	
+        </div>
+        <!---->
+{% endblock  %}

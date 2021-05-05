@@ -15,3 +15,6 @@ class ProForm(forms.ModelForm):
     class Meta:
         model=ProfilUpdate
         fields=["image"]
+        widgets={
+            "image":forms.FileInput(attrs={"class":"form-control col-lg-3"}),
+        }

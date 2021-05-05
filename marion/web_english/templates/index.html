@@ -11,14 +11,16 @@
     	<div id="carouselExampleSlidesOnly" class="carousel slide container-fluid" data-bs-ride="carousel">
         <div class="carousel-inner" >
             <div class="carousel-item active ">
+			{% for sliderhead in sliderhead %}
                 <div class="slide_left">
-                	<h1>Android Courses</h1>
-                	<div style="font-size:24px;color:#e5e5e5" class="sub header">A complete guide for learning Android App development</div>
+                	<h1>{{sliderhead.titel}}</h1>
+                	<div style="font-size:24px;color:#e5e5e5" class="sub header">{{sliderhead.subtitel}}</div>
 					<button>Check Now</button>
                 </div>
                 <div class="slide_right">
-                	<img src="{% static 'sliderimags.png' %}">
+                	<img src="{{sliderhead.slide_image}}">
                 </div>
+			{% endfor %}
             </div>
         </div>
         </div>
@@ -39,38 +41,42 @@
     	</div>
     	<!--Contant body Start-->
         <div class="content">
+			{% for contant in contant_1 %}
         	<div class="content_1">
-        		<h2>Android Online Course For Professionals</h2>
-        		<p>Learn the latest in Android and update yourself</p>
-        		<span>Millions of developers are learning at MindOrks</span><br>
+        		<h2>{{contant.titel}}</h2>
+        		<p>{{contant.subtitel}}</p>
+        		<span>{{contant.subtitle2}}</span><br>
         		<div class="Spantext" style="float:left;  margin-top:25px;">
-        			<img src="{% static '959128.jpg' %}" style="width:50px;height:50px;border-radius:50px; background: #999;">
-        			<img src="{% static '959126.jpg' %}" style="width:50px;height:50px;border-radius:50px; background: #999;">
+        			<img src="{{contant.image1}}" style="width:50px;height:50px;border-radius:50px; background: #999;">
+        			<img src="{{contant.image2}}" style="width:50px;height:50px;border-radius:50px; background: #999;">
         		</div><br>
         		
         		<div class="Spantext" style="margin-left:35%;">
-        			Instructors<br>
-        			Janishar Ali, Amit Shekhar
+        			{{contant.positons}}<br>
+        			{{contant.name1}}, {{contant.name2}}
         		</div><br>
         		
-        		<button>Explor Now</button>
+        		<a href="{{contant.button_url}}"><button>Explor Now</button></a>
         	</div>
+			{% endfor %}
+			{% for contant in contant_2 %}
         	<div class="content_2">
-        		<h2>Android Online Course For Professionals</h2>
-        		<p>Learn the latest in Android and update yourself</p>
-        		<span>Millions of developers are learning at MindOrks</span><br>
+        		<h2>{{contant.titel}}</h2>
+        		<p>{{contant.subtitel}}</p>
+        		<span>{{contant.subtitle2}}</span><br>
         		<div class="Spantext" style="float:left;  margin-top:25px;">
-        			<img src="{% static '959128.jpg' %}" style="width:50px;height:50px;border-radius:50px; background: #999;">
-        			<img src="{% static '959126.jpg' %}" style="width:50px;height:50px;border-radius:50px; background: #999;">
+        			<img src="{{contant.image1}}" style="width:50px;height:50px;border-radius:50px; background: #999;">
+        			<img src="{{contant.image2}}" style="width:50px;height:50px;border-radius:50px; background: #999;">
         		</div><br>
         		
         		<div class="Spantext" style="margin-left:35%;">
-        			Instructors<br>
-        			Janishar Ali, Amit Shekhar
+        			{{contant.positons}}<br>
+        			{{contant.name1}}, {{contant.name2}}
         		</div><br>
         		
-        		<button>Explor Now</button>
+        		<a href="{{contant.button_url}}"><button>Explor Now</button></a>
         	</div>
+			{% endfor %}
         </div>
 
         <!--clear body Start-->
