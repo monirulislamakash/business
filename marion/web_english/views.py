@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 from .models import Head_titel,ProfilUpdate,Android_stor,App_Category,AppList,Content_2
 from .models import Blog,Subscription,Our_team,Brand_logo,Category,Course,Content_1
+from math import ceil
 #add Arabic section
 from .models import BlogAR,SubscriptionAR,Our_teamAR,Brand_logoAR,Head_titelAR,CourseAR,Content_2AR
 from .models import CategoryAR,Android_storAR,App_CategoryAR,AppListAR,Content_1AR
@@ -148,11 +149,15 @@ def android_course(request):
     sliderhead=Head_titel.objects.all()
     contant_1=Content_1.objects.all()
     contant_2=Content_2.objects.all()
+    n= len(allcourse)
+    nsliders=n//4 + ceil((n/4)+(n//4))
     sendvar={
         'allcourse':allcourse,
         'sliderhead':sliderhead,
         "contant_1":contant_1,
-        "contant_2":contant_2
+        "contant_2":contant_2,
+        'no_of_slides':nsliders,
+        'product': allcourse
     }
     return render(request, "android_course.html",sendvar)
 #add Arabic section
