@@ -298,10 +298,14 @@ def android_course_ar(request):
     sliderhead=Head_titelAR.objects.all()
     contant_1=Content_1AR.objects.all()
     contant_2=Content_2AR.objects.all()
+    n= len(allcourse)
+    nsliders=n//4 + ceil((n/4)+(n//4))
     sendvar={
         'allcourse':allcourse,
         'sliderhead':sliderhead,
         "contant_1":contant_1,
-        "contant_2":contant_2
+        "contant_2":contant_2,
+        'no_of_slides':nsliders,
+        'product': allcourse
     }
     return render(request, "arabic/android_course_ar.html",sendvar)

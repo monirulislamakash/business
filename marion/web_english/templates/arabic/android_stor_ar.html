@@ -13,11 +13,11 @@
         <div class="carousel-inner" >
             <div class="carousel-item active ">
                 <div align="center">
-                	<h1>Android Store</h1><br>
-                	<h2>Search Android Libraries, Projects, and Tools</h2><br><br>
+                	<h1>متجر أندرويد</h1><br>
+                	<h2>ابحث في مكتبات ومشروعات وأدوات Android</h2><br><br>
                 	<form method="POST" action="/search_app">
 					{% csrf_token %}
-						<input type="text" name="searchapp" placeholder="Search your app" style="height: 39px;padding: 18px;border-top-left-radius:50px;border-bottom-left-radius: 50px;border: none;outline: none;"><button type="submit" style="height:39px;border:none;width:100px;border-top-right-radius:50px;border-bottom-right-radius:50px;background:#6435c9;color:#fff;">Search</button>
+						<input type="text" name="searchapp" placeholder="ابحث في تطبيقك" style="height: 39px;padding: 18px;border-top-left-radius:50px;border-bottom-left-radius: 50px;border: none;outline: none;"><button type="submit" style="height:39px;border:none;width:100px;border-top-right-radius:50px;border-bottom-right-radius:50px;background:#6435c9;color:#fff;">يبحث</button>
 					</form>
 				</div>
             </div>
@@ -29,10 +29,10 @@
     <div class="container">
     <div class="row">
     	<div class="col-lg-3 col-md-3 col-sm-12 android_catecory" align="center">
-    		<h5 align="center">Search Category Here</h5>
+    		<h5 align="center">فئة البحث هنا</h5>
     		<form method="POST" action="/search_app" style="margin-bottom:25px;">
 				{% csrf_token %}
-				<input type="text" name="searchapp" placeholder="Search your app" class="s_cata"><button type="submit" class="s_btn">Search</button>
+				<input type="text" name="searchapp" placeholder="ابحث في تطبيقك" class="s_cata"><button type="submit" class="s_btn">يبحث</button>
 			</form>
 			<ul>
 				{% for category in category %}

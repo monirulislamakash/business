@@ -12,8 +12,8 @@
         <div class="carousel-inner" >
             <div class="carousel-item active ">
                 <div align="center">
-                	<h1>Android App Development Online Course</h1><br>
-                	<h4>Check our online courses on Android App Development</h4><br>
+                	<h1>دورة تطوير تطبيقات Android عبر الإنترنت</h1><br>
+                	<h4>تحقق من دوراتنا التدريبية عبر الإنترنت حول تطوير تطبيقات Android</h4><br>
 				</div>
             </div>
         </div>
@@ -23,15 +23,15 @@
     <!--Content Start-->
     <div class="container">
     	<div class="content_titel col-sm-12">
-    		Learn Android App Development
+    		تعلم تطوير تطبيقات Android
     	</div>
 
     	<div class="content_sub_titel col-sm-12">
-    		Millions of developers are learning at MindOrks
+    		الملايين من المطورين يتعلمون في MindOrks
     	</div>
 
         <div class="content_head col-sm-12">
-    		<h4>Android Development Courses</h4>
+    		<h4>دورات تطوير Android</h4>
     	</div>
     	<!--Contant body Start-->
         <div class="content">
@@ -81,20 +81,45 @@
         <!---->
         <div class="course">
         <h3 class="blog_head">
-    		A complete guide for learning development
+    		دليل كامل لتطوير التعلم
     	</h3>
-        {% for allcourse in allcourse %}
-   			<a href="" style="text-decoration: none; color: #000;">
-	    		<div class="card mt-3" style="width:30rem;margin:0 auto;">
-                <img src="{{allcourse.thumbnail}}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h4 class="card-title">{{allcourse.course_name}}</h4>
-                    <p class="card-text mb-3  mt-3">{{allcourse.course_body}}</p>
-                    <a href="#" class="btn btn" style="float:right;width:150px; background:#6435c9;color:#fff;">Buy Now</a>
-                </div>
-                </div>
-			</a>
-        {% endfor %} 	
+		<!--Crousel course Start-->
+		<div id="carouselExampleControls" style="text-align: center;" class="carousel slide" data-bs-ride="carousel">
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+            
+            <div class="card d-inline-block" style="width: 18rem;">
+			<img src="{% static 'image.png' %}" class="card-img-top" alt="...">
+			<div class="card-body">
+				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			</div>
+			</div>
+
+            {% for i in product|slice:"1:" %}
+            <div class="card d-inline-block" style="width: 18rem;">
+			<img src="{% static 'image.png' %}" class="card-img-top" alt="...">
+			<div class="card-body">
+				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			</div>
+			</div>
+
+            {% if forloop.counter|divisibleby:3 and forloop.counter > 0 and not forloop.last %}
+             </div><div class="carousel-item">
+            {% endif%}
+
+            {% endfor %}
+      		</div>
+		</div>
+		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Next</span>
+		</button>
+		</div>
+		<!--Crousel course end-->
         </div>
         <!---->
 {% endblock  %}
