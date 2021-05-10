@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-{% load static %}
+{% load i18n %}
 {% block head %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 {% endblock  %}
@@ -11,11 +11,11 @@
     	<div id="carouselExampleSlidesOnly" class="carousel slide container-fluid" data-bs-ride="carousel">
         <div class="carousel-inner" >
             <div class="carousel-item active ">
-            {% for sliderhead in sliderhead %}
+			{% for sliderhead in sliderhead %}
                 <div class="slide_left">
                 	<h1>{{sliderhead.titel}}</h1>
                 	<div style="font-size:24px;color:#e5e5e5" class="sub header">{{sliderhead.subtitel}}</div>
-					<button>Check Now</button>
+					<button>{% trans "Check Now" %}</button>
                 </div>
                 <div class="slide_right">
                 	<img src="{{sliderhead.slide_image}}">
@@ -29,7 +29,7 @@
     <!--Content Start-->
     <div class="container">
     	<div class="content_titel col-sm-12">
-    		Android Development Blog
+    	{% trans "Android Development Blog" %}
     	</div>
     </div>
     <!--Blog category Start-->
@@ -67,6 +67,6 @@
     	</div>
     	<!--Contant blog end-->
     	<div style="height: 100px; width: 300px; margin-top:10px;margin:0 auto; text-align: center;">
-          <a href="{% url 'allblog' %}"><button style="margin-top: 20px;background: #6435c9;width: 200px;height: 50px;color: #fff;border-radius: 16px;border: none;">See more</button></a>
+          <a href="{% url 'allblog' %}"><button style="margin-top: 20px;background: #6435c9;width: 200px;height: 50px;color: #fff;border-radius: 16px;border: none;">{% trans "See more" %}</button></a>
         </div>
 {% endblock  %}

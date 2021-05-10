@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-{% load static %}
+{% load i18n %}
 {% block head %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 {% endblock  %}
@@ -11,14 +11,14 @@
     	<div id="carouselExampleSlidesOnly" class="carousel slide container-fluid" data-bs-ride="carousel">
         <div class="carousel-inner" >
             <div class="carousel-item active ">
-            {% for sliderhead in sliderhead %}
+			{% for sliderhead in sliderhead %}
                 <div class="slide_left">
                 	<h1>{{sliderhead.titel}}</h1>
                 	<div style="font-size:24px;color:#e5e5e5" class="sub header">{{sliderhead.subtitel}}</div>
-					<button>Check Now</button>
+					<button>{% trans "Check Now" %}</button>
                 </div>
                 <div class="slide_right">
-                	<img src="{{sliderhead.slide_image.url}}">
+                	<img src="{{sliderhead.slide_image}}">
                 </div>
 			{% endfor %}
             </div>
@@ -29,7 +29,7 @@
     <!--Content Start-->
     <div class="container">
     	<div class="content_titel col-sm-12">
-    		Blog Category {% for i in blog|slice:':1' %}"{{i.category}}"{% endfor %}
+    	{% trans "Blog Category" %}	 {% for i in blog|slice:':1' %}"{{i.category}}"{% endfor %}
     	</div>
     </div>
     <!--Blog category Start-->

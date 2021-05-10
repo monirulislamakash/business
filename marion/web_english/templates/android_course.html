@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-{% load static %}
+{% load i18n %}
 {% block head %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 {% endblock  %}
@@ -12,8 +12,8 @@
         <div class="carousel-inner" >
             <div class="carousel-item active ">
                 <div align="center">
-                	<h1>Android App Development Online Course</h1><br>
-                	<h4>Check our online courses on Android App Development</h4><br>
+                	<h1>{% trans "Android App Development Online Course" %}</h1><br>
+                	<h4>{% trans "Check our online courses on Android App Development" %}</h4><br>
 				</div>
             </div>
         </div>
@@ -23,15 +23,15 @@
     <!--Content Start-->
     <div class="container">
     	<div class="content_titel col-sm-12">
-    		Learn Android App Development
+    		{% trans "Learn Android App Development" %}
     	</div>
 
     	<div class="content_sub_titel col-sm-12">
-    		Millions of developers are learning at MindOrks
+			{% trans "Millions of developers are learning at MindOrks" %}	
     	</div>
 
         <div class="content_head col-sm-12">
-    		<h4>Android Development Courses</h4>
+    		<h4>{% trans "Android Development Courses" %}</h4>
     	</div>
     	<!--Contant body Start-->
         <div class="content">
@@ -80,7 +80,7 @@
         <!---->
         <div class="course">
         <h3 class="blog_head">
-    		A complete guide for learning development
+    		{% trans "A complete guide for learning development" %}
     	</h3>
 		<!--Crousel course Start-->
 		<div id="carouselExampleControls" style="text-align: center;" class="carousel slide" data-bs-ride="carousel">
@@ -90,7 +90,7 @@
             <div class="card d-inline-block" style="width: 18rem;">
 			<img src="{% static 'image.png' %}" class="card-img-top" alt="...">
 			<div class="card-body">
-				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				<p class="card-text">{% trans "" %} Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 			</div>
 			</div>
 
@@ -122,9 +122,3 @@
         </div>
         <!---->
 {% endblock  %}
-<div class="card d-inline-block" style="width: 18rem;">
-				<img src="{% static 'image.png' %}" class="card-img-top" alt="...">
-				<div class="card-body">
-					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				</div>
-				</div>
