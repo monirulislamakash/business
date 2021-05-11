@@ -7,7 +7,7 @@
 {% block title %}Android Course{% endblock  %}
 {% block body %}
     <!--Slider Start-->
-    <div class="container-fluid course_slider">
+    <div class="container-fluid course_slider" style="max-width:1324px;">
     	<div id="carouselExampleSlidesOnly" class="carousel slide container-fluid" data-bs-ride="carousel">
         <div class="carousel-inner" >
             <div class="carousel-item active ">
@@ -21,7 +21,7 @@
     </div>
     <!--Slider End-->
     <!--Content Start-->
-    <div class="container">
+    <div class="container" style="max-width:1324px;">
     	<div class="content_titel col-sm-12">
     		{% trans "Learn Android App Development" %}
     	</div>
@@ -78,7 +78,7 @@
 
     	<!--Contant body end-->
         <!---->
-        <div class="course">
+        <div class="course" style="max-width:1324px;">
         <h3 class="blog_head">
     		{% trans "A complete guide for learning development" %}
     	</h3>
@@ -121,4 +121,5 @@
 		<!--Crousel course end-->
         </div>
         <!---->
+		<script src="{% static 'js/./script.js' %}"></script>
 {% endblock  %}

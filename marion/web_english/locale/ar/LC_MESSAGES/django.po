@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-11 04:15+0600\n"
+"POT-Creation-Date: 2021-05-11 15:44+0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -48,12 +48,23 @@ msgid "A complete guide for learning development"
 msgstr "دليل كامل لتطوير التعلم"
 
 #: .\web_english\templates\android_stor.html:16
+#: .\web_english\templates\base.html:58 .\web_english\templates\base.html:100
 msgid "Android Store"
 msgstr "متجر أندرويد"
 
 #: .\web_english\templates\android_stor.html:17
 msgid "Search Android Libraries, Projects, and Tools"
 msgstr "ابحث في مكتبات ومشروعات وأدوات Android"
+
+#: .\web_english\templates\android_stor.html:20
+#: .\web_english\templates\android_stor.html:35
+msgid "Search your app"
+msgstr "ابحث في تطبيقك"
+
+#: .\web_english\templates\android_stor.html:20
+#: .\web_english\templates\android_stor.html:35
+msgid "Search"
+msgstr "يبحث"
 
 #: .\web_english\templates\android_stor.html:32
 msgid "Search Category Here"
@@ -63,9 +74,96 @@ msgstr "فئة البحث هنا"
 msgid "This Is a Category"
 msgstr "هذه فئة"
 
+#: .\web_english\templates\base.html:45 .\web_english\templates\base.html:87
+msgid "Navbar"
+msgstr "نافبار"
+
+#: .\web_english\templates\base.html:52 .\web_english\templates\base.html:94
+msgid "Home"
+msgstr "منزل، بيت"
+
+#: .\web_english\templates\base.html:55 .\web_english\templates\base.html:97
+msgid "Blog"
+msgstr "مدونة او مذكرة"
+
+#: .\web_english\templates\base.html:61 .\web_english\templates\base.html:103
+msgid "Android Courses"
+msgstr "متجر أندرويد"
+
+#: .\web_english\templates\base.html:68
+msgid "Profile"
+msgstr "الملف الشخصي"
+
+#: .\web_english\templates\base.html:69
+msgid "Post"
+msgstr "بريد"
+
+#: .\web_english\templates\base.html:70
+msgid "Logout"
+msgstr "تسجيل خروج"
+
+#: .\web_english\templates\base.html:106 .\web_english\templates\base.html:131
+#: .\web_english\templates\base.html:154
+msgid "Login"
+msgstr "تسجيل الدخول"
+
+#: .\web_english\templates\base.html:109
+msgid "SingUp"
+msgstr "التسجيل"
+
+#: .\web_english\templates\base.html:138 .\web_english\templates\base.html:184
+msgid "Email address"
+msgstr "عنوان البريد الإلكتروني"
+
+#: .\web_english\templates\base.html:140 .\web_english\templates\base.html:186
+msgid "Please never share your email with anyone else."
+msgstr "يرجى عدم مشاركة بريدك الإلكتروني مع أي شخص آخر."
+
+#: .\web_english\templates\base.html:143 .\web_english\templates\base.html:189
+msgid "Password"
+msgstr "كلمه السر"
+
+#: .\web_english\templates\base.html:145 .\web_english\templates\base.html:191
+#: .\web_english\templates\base.html:196
+msgid "Please never share your Password with anyone else."
+msgstr "يرجى عدم مشاركة كلمة المرور الخاصة بك مع أي شخص آخر."
+
+#: .\web_english\templates\base.html:153 .\web_english\templates\base.html:209
+msgid "Close"
+msgstr "يغلق"
+
+#: .\web_english\templates\base.html:167 .\web_english\templates\base.html:210
+msgid "Register"
+msgstr "يسجل"
+
+#: .\web_english\templates\base.html:174
+msgid "First Name"
+msgstr "الاسم الأول"
+
+#: .\web_english\templates\base.html:176 .\web_english\templates\base.html:181
+msgid "Please never share your Information with anyone else."
+msgstr "يرجى عدم مشاركة معلوماتك مع أي شخص آخر."
+
+#: .\web_english\templates\base.html:179
+msgid "Last Name"
+msgstr "الكنية"
+
+#: .\web_english\templates\base.html:194
+msgid "Confirm Password"
+msgstr "تأكيد كلمة المرور"
+
+#: .\web_english\templates\base.html:199
+#| msgid "Profile"
+msgid "Profile Picture"
+msgstr "الملف الشخصي"
+
+#: .\web_english\templates\base.html:201
+msgid "Upload your Profile picture."
+msgstr "قم بتحميل صورة ملف التعريف الخاص بك."
+
 #: .\web_english\templates\blog.html:18
 #: .\web_english\templates\category.html:18
-#: .\web_english\templates\details_blog.html:21
+#: .\web_english\templates\details_blog.html:16
 #: .\web_english\templates\index.html:18
 msgid "Check Now"
 msgstr "تأكد الان"
@@ -82,11 +180,11 @@ msgstr "شاهد المزيد"
 msgid "Blog Category"
 msgstr "فئة المدونة"
 
-#: .\web_english\templates\details_blog.html:19
+#: .\web_english\templates\details_blog.html:14
 msgid "Android Online Course for"
 msgstr "دورة Android عبر الإنترنت لـ"
 
-#: .\web_english\templates\details_blog.html:19
+#: .\web_english\templates\details_blog.html:14
 msgid "Professionals"
 msgstr "المهنيين"
 
@@ -117,6 +215,10 @@ msgstr "الإشتراك"
 #: .\web_english\templates\index.html:129
 msgid "A must have weekly newsletter to become a complete Android developer"
 msgstr "يجب أن يكون لديك رسالة إخبارية أسبوعية لتصبح مطور Android كاملًا."
+
+#: .\web_english\templates\index.html:132
+msgid "Your Email"
+msgstr "بريدك الالكتروني"
 
 #: .\web_english\templates\index.html:132
 msgid "Subscribe"

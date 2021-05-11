@@ -7,7 +7,7 @@
 {% block title %}Home{% endblock  %}
 {% block body %}
     <!--Slider Start-->
-    <div class="container-fluid slider">
+    <div class="container-fluid slider" style="max-width:1324px;">
     	<div id="carouselExampleSlidesOnly" class="carousel slide container-fluid" data-bs-ride="carousel">
         <div class="carousel-inner" >
             <div class="carousel-item active ">
@@ -27,7 +27,7 @@
     </div>
     <!--Slider End-->
     <!--Content Start-->
-    <div class="container">
+    <div class="container" style="max-width:1324px;">
     	<div class="content_titel col-sm-12">
 		{% trans "Learn Android App Development" %}
     	</div>
@@ -40,7 +40,7 @@
     		<h4>{% trans "Android Development Courses" %}</h4>
     	</div>
     	<!--Contant body Start-->
-        <div class="content">
+        <div class="content" style="margin:0 auto;">
 			{% for contant in contant_1 %}
         	<div class="content_1">
         		<h2>{{contant.titel}}</h2>
@@ -90,7 +90,7 @@
     </div>
     </div>
     	<!--Contant blog start-->
-    	<div class="blog">
+    	<div class="blog" style="max-width:1324px; margin:0 auto;">
     	<div class="row blog_row">
     		{% for blogpost in blog|slice:":6"%}
 			
@@ -118,7 +118,7 @@
           <a href="{% url 'allblog' %}"><button style="margin-top: 20px;background: #6435c9;width: 200px;height: 50px;color: #fff;border-radius: 16px;border: none;">{% trans "See more" %}</button></a>
         </div>
 	<!--Subscription Start-->
-	<div class="Subscription">
+	<div class="Subscription" style="max-width:1324px; margin:0 auto;">
 		<div class="Subscription_image">
 			<img src="{% static 'web-templates-titan.jpg' %}">
 		</div>
@@ -129,13 +129,13 @@
 			<p>{% trans "A must have weekly newsletter to become a complete Android developer" %}</p>
 			<form method="POST">
 			{% csrf_token %}
-				<input type="email" name="Subscription_email" placeholder="Your Email"><button type="submit">{% trans "Subscribe" %} </button>
+				<input type="email" name="Subscription_email" placeholder="{% trans "Your Email" %}"><button type="submit">{% trans "Subscribe" %} </button>
 			</form>
 		</div>
 	</div>
 	<!--Subscription End-->
 	<!--Our tem Start-->
-	<div class="our_tem col-lg-12 col-md-12">
+	<div class="our_tem col-lg-12 col-md-12" style="max-width:1324px; margin:0 auto;">
 		<h1 align="center">{% trans "Our Team" %}</h1>
 		<div class="row">
 		{% for our_team in team %}
@@ -155,4 +155,5 @@
 	<!--Our tem end-->
     
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+	<script src="{% static 'js/./script.js' %}"></script>
 {% endblock  %}
