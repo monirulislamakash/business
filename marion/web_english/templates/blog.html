@@ -45,8 +45,7 @@
     </div>
     <!--Blog category End-->
     <!--Contant blog start-->
-    	<div class="blog" style="max-width:1324px;">
-    	<div class="row blog_row">
+    	<div class="blog">
     		{% for blogpost in blog|slice:":6"%}
 			
     		<div class="card blog_card">
@@ -61,10 +60,9 @@
 			  </div>
 			</a>
 			</div>
-			
-		{% endfor %}
-        </div>
+			{% endfor %}
     	</div>
+    	
     	<!--Contant blog end-->
     	<div style="height: 100px; width: 300px; margin-top:10px;margin:0 auto; text-align: center;">
           <a href="{% url 'allblog' %}"><button style="margin-top: 20px;background: #6435c9;width: 200px;height: 50px;color: #fff;border-radius: 16px;border: none;">{% trans "See more" %}</button></a>

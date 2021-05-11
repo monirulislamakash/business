@@ -42,7 +42,7 @@
   {% if request.user.is_authenticated %}
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="max-width:1324px;background:#000 !important; position: sticky; top:0;z-index: 1;margin:0 auto;">
     <div class="container">
-        <a class="navbar-brand" href="{% url 'home' %}">{% trans "Navbar" %}</a>
+        <a class="navbar-brand" href="http://127.0.0.1:8000/ar/">{% trans "Navbar" %}</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
@@ -59,6 +59,15 @@
             </li>
             <li class="nav-item">
             <a class="nav-link active" aria-current="page"  href="{% url 'android_course' %}">{% trans "Android Courses" %} </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+               {% trans "Language" %}
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="http://127.0.0.1:8000/en/">English</a></li>
+                <li><a class="dropdown-item" href="http://127.0.0.1:8000/ar/">Arabic</a></li>
+              </ul>
             </li>
             <li class="nav-item dropdown" >
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -84,7 +93,7 @@
     {% else %}
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="max-width:1324px;background:#000 !important; position: sticky; top:0;z-index: 1;margin:0 auto;">
     <div class="container" >
-        <a class="navbar-brand" href="{% url 'home' %}">{% trans "Navbar" %}</a>
+        <a class="navbar-brand" href="http://127.0.0.1:8000/ar/">{% trans "Navbar" %}</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
@@ -132,11 +141,11 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form method="POST" action="/login">
+            <form method="POST" action="login">
                 {% csrf_token %}
               <div class="form-group">
                 <label for="exampleInputEmail1">{% trans "Email address" %} </label>
-                <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <input name="email" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                 <small id="emailHelp" class="form-text text-muted">{% trans "Please never share your email with anyone else." %} </small>
               </div>
               <div class="form-group">
@@ -168,7 +177,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form method="POST" action="/singup" enctype="multipart/form-data">
+            <form method="POST" action="singup" enctype="multipart/form-data">
             {% csrf_token %}
               <div class="form-group">
                 <label for="exampleInputEmail1">{% trans "First Name" %} </label>
@@ -237,3 +246,4 @@
     -->
   </body>
 </html>
+© 2021 GitHub, Inc.

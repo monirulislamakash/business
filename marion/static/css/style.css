@@ -122,12 +122,14 @@ body{
     height: 39px;
 }
 .blog{
-	width: 100%;
-	margin: 0 auto;
+	max-width:1324px;
+	margin:0 auto;
+	text-align: center;
 }
 .blog_row{
-	width: 90%;
+	width: 100%;
 	margin: 0 auto;
+	text-align: center;
 }
 .blog_card {
     margin: 20px;
@@ -141,6 +143,7 @@ body{
     padding-top: 0px;
     height: auto;
     line-height: 22px;
+    display: inline-block;
 }
 .blog_card:hover{
 	margin: 20px;
@@ -315,7 +318,7 @@ body{
     transition: all .5s;
 }
 .profile_slider{
-	width:100%;
+	max-width:1324px;
 	height: 400px;
 	background: linear-gradient(90deg,#11209f,#b800de 50%,#f5a623) !important;
 	color: #fff;

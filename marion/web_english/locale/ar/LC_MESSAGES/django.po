@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-11 15:44+0600\n"
+"POT-Creation-Date: 2021-05-12 01:17+0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,6 +19,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: .\web_english\templates\allblog.html:12 .\web_english\templates\blog.html:32
+msgid "Android Development Blog"
+msgstr "مدونة تطوير Android"
 
 #: .\web_english\templates\android_course.html:15
 msgid "Android App Development Online Course"
@@ -48,7 +52,7 @@ msgid "A complete guide for learning development"
 msgstr "دليل كامل لتطوير التعلم"
 
 #: .\web_english\templates\android_stor.html:16
-#: .\web_english\templates\base.html:58 .\web_english\templates\base.html:100
+#: .\web_english\templates\base.html:58 .\web_english\templates\base.html:109
 msgid "Android Store"
 msgstr "متجر أندرويد"
 
@@ -74,90 +78,93 @@ msgstr "فئة البحث هنا"
 msgid "This Is a Category"
 msgstr "هذه فئة"
 
-#: .\web_english\templates\base.html:45 .\web_english\templates\base.html:87
+#: .\web_english\templates\base.html:45 .\web_english\templates\base.html:96
 msgid "Navbar"
 msgstr "نافبار"
 
-#: .\web_english\templates\base.html:52 .\web_english\templates\base.html:94
+#: .\web_english\templates\base.html:52 .\web_english\templates\base.html:103
 msgid "Home"
 msgstr "منزل، بيت"
 
-#: .\web_english\templates\base.html:55 .\web_english\templates\base.html:97
+#: .\web_english\templates\base.html:55 .\web_english\templates\base.html:106
 msgid "Blog"
 msgstr "مدونة او مذكرة"
 
-#: .\web_english\templates\base.html:61 .\web_english\templates\base.html:103
+#: .\web_english\templates\base.html:61 .\web_english\templates\base.html:112
 msgid "Android Courses"
 msgstr "متجر أندرويد"
 
-#: .\web_english\templates\base.html:68
+#: .\web_english\templates\base.html:65
+msgid "Language"
+msgstr "لغة"
+
+#: .\web_english\templates\base.html:77
 msgid "Profile"
 msgstr "الملف الشخصي"
 
-#: .\web_english\templates\base.html:69
+#: .\web_english\templates\base.html:78
 msgid "Post"
 msgstr "بريد"
 
-#: .\web_english\templates\base.html:70
+#: .\web_english\templates\base.html:79
 msgid "Logout"
 msgstr "تسجيل خروج"
 
-#: .\web_english\templates\base.html:106 .\web_english\templates\base.html:131
-#: .\web_english\templates\base.html:154
+#: .\web_english\templates\base.html:115 .\web_english\templates\base.html:140
+#: .\web_english\templates\base.html:163
 msgid "Login"
 msgstr "تسجيل الدخول"
 
-#: .\web_english\templates\base.html:109
+#: .\web_english\templates\base.html:118
 msgid "SingUp"
 msgstr "التسجيل"
 
-#: .\web_english\templates\base.html:138 .\web_english\templates\base.html:184
+#: .\web_english\templates\base.html:147 .\web_english\templates\base.html:193
 msgid "Email address"
 msgstr "عنوان البريد الإلكتروني"
 
-#: .\web_english\templates\base.html:140 .\web_english\templates\base.html:186
+#: .\web_english\templates\base.html:149 .\web_english\templates\base.html:195
 msgid "Please never share your email with anyone else."
 msgstr "يرجى عدم مشاركة بريدك الإلكتروني مع أي شخص آخر."
 
-#: .\web_english\templates\base.html:143 .\web_english\templates\base.html:189
+#: .\web_english\templates\base.html:152 .\web_english\templates\base.html:198
 msgid "Password"
 msgstr "كلمه السر"
 
-#: .\web_english\templates\base.html:145 .\web_english\templates\base.html:191
-#: .\web_english\templates\base.html:196
+#: .\web_english\templates\base.html:154 .\web_english\templates\base.html:200
+#: .\web_english\templates\base.html:205
 msgid "Please never share your Password with anyone else."
 msgstr "يرجى عدم مشاركة كلمة المرور الخاصة بك مع أي شخص آخر."
 
-#: .\web_english\templates\base.html:153 .\web_english\templates\base.html:209
+#: .\web_english\templates\base.html:162 .\web_english\templates\base.html:218
 msgid "Close"
 msgstr "يغلق"
 
-#: .\web_english\templates\base.html:167 .\web_english\templates\base.html:210
+#: .\web_english\templates\base.html:176 .\web_english\templates\base.html:219
 msgid "Register"
 msgstr "يسجل"
 
-#: .\web_english\templates\base.html:174
+#: .\web_english\templates\base.html:183
 msgid "First Name"
 msgstr "الاسم الأول"
 
-#: .\web_english\templates\base.html:176 .\web_english\templates\base.html:181
+#: .\web_english\templates\base.html:185 .\web_english\templates\base.html:190
 msgid "Please never share your Information with anyone else."
 msgstr "يرجى عدم مشاركة معلوماتك مع أي شخص آخر."
 
-#: .\web_english\templates\base.html:179
+#: .\web_english\templates\base.html:188
 msgid "Last Name"
 msgstr "الكنية"
 
-#: .\web_english\templates\base.html:194
+#: .\web_english\templates\base.html:203
 msgid "Confirm Password"
 msgstr "تأكيد كلمة المرور"
 
-#: .\web_english\templates\base.html:199
-#| msgid "Profile"
+#: .\web_english\templates\base.html:208
 msgid "Profile Picture"
 msgstr "الملف الشخصي"
 
-#: .\web_english\templates\base.html:201
+#: .\web_english\templates\base.html:210
 msgid "Upload your Profile picture."
 msgstr "قم بتحميل صورة ملف التعريف الخاص بك."
 
@@ -168,11 +175,7 @@ msgstr "قم بتحميل صورة ملف التعريف الخاص بك."
 msgid "Check Now"
 msgstr "تأكد الان"
 
-#: .\web_english\templates\blog.html:32
-msgid "Android Development Blog"
-msgstr "مدونة تطوير Android"
-
-#: .\web_english\templates\blog.html:70 .\web_english\templates\index.html:118
+#: .\web_english\templates\blog.html:68 .\web_english\templates\index.html:116
 msgid "See more"
 msgstr "شاهد المزيد"
 
@@ -196,11 +199,11 @@ msgstr "استكشف الآن"
 msgid "Featured Blogs on Android App Development"
 msgstr "تعلم تطوير تطبيقات Android"
 
-#: .\web_english\templates\index.html:126
+#: .\web_english\templates\index.html:124
 msgid "MindOrks Newsletter"
 msgstr "رسالة إخبارية MindOrks"
 
-#: .\web_english\templates\index.html:127
+#: .\web_english\templates\index.html:125
 msgid ""
 "A free weekly newsletter that comes with the latest articles on Android App "
 "Development, open source projects, events and useful discussions"
@@ -208,22 +211,22 @@ msgstr ""
 "نشرة إخبارية أسبوعية مجانية مصحوبة بأحدث المقالات على تطبيق Android التطوير "
 "والمشاريع مفتوحة المصدر والأحداث والمناقشات المفيدة"
 
-#: .\web_english\templates\index.html:128
+#: .\web_english\templates\index.html:126
 msgid "Subscribe Now"
 msgstr "الإشتراك"
 
-#: .\web_english\templates\index.html:129
+#: .\web_english\templates\index.html:127
 msgid "A must have weekly newsletter to become a complete Android developer"
 msgstr "يجب أن يكون لديك رسالة إخبارية أسبوعية لتصبح مطور Android كاملًا."
 
-#: .\web_english\templates\index.html:132
+#: .\web_english\templates\index.html:130
 msgid "Your Email"
 msgstr "بريدك الالكتروني"
 
-#: .\web_english\templates\index.html:132
+#: .\web_english\templates\index.html:130
 msgid "Subscribe"
 msgstr "الإشتراك"
 
-#: .\web_english\templates\index.html:139
+#: .\web_english\templates\index.html:137
 msgid "Our Team"
 msgstr "فريقنا"

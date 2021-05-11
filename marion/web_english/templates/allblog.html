@@ -9,11 +9,11 @@
     <!--Content Start-->
     <div class="container">
     	<div class="content_titel col-sm-12">
-    		Android Development Blog
+    		{% trans "Android Development Blog" %}
     	</div>
     </div>
     <!--Blog category Start-->
-    <div class="container-fluid">
+    <div class="container-fluid" style="max-width:1324px;">
     	<div class="category">
     		<ul>
     			<li class="active_category"><a href="{% url 'allblog' %}"> Letest</a></li>
@@ -25,8 +25,7 @@
     </div>
     <!--Blog category End-->
     <!--Contant blog start-->
-    	<div class="blog">
-    	<div class="row blog_row">
+    	<div class="blog" style="max-width:1324px; margin:0 auto; text-align:center;">
     		{% for blogpost in blogpost %}
 			
     		<div class="card blog_card">
@@ -43,7 +42,6 @@
 			</div>
 			
 		{% endfor %}
-        </div>
     	</div>
     	<!--Contant blog end-->
 		<script src="{% static 'js/./script.js' %}"></script>
