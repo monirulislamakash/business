@@ -61,7 +61,7 @@
             <a class="nav-link active" aria-current="page"  href="{% url 'android_course' %}">{% trans "Android Courses" %} </a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                {% trans "Language" %}
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -110,6 +110,15 @@
             </li>
             <li class="nav-item">
             <a class="nav-link active" aria-current="page"  href="{% url 'android_course' %}">{% trans "Android Courses" %} </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+               {% trans "Language" %}
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="http://127.0.0.1:8000/en/">English</a></li>
+                <li><a class="dropdown-item" href="http://127.0.0.1:8000/ar/">Arabic</a></li>
+              </ul>
             </li>
             <li class="nav-item">
                 <a class="nav-link login_button" data-bs-toggle="modal" data-bs-target="#exampleModal_login" href="#">{% trans "Login" %} </a>
