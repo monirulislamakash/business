@@ -157,3 +157,9 @@ def android_course(request):
         'product': allcourse
     }
     return render(request, "android_course.html",sendvar)
+def view_course(request,id):
+    view_course=Course.objects.filter(id=id)
+    sendvar={
+        "view_course":view_course,
+    }
+    return render(request, "course.html",sendvar)

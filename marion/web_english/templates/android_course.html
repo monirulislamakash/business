@@ -86,22 +86,25 @@
 		<div id="carouselExampleControls" style="text-align: center;" class="carousel slide" data-bs-ride="carousel">
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-            
+            {% for i in product|slice:"0:1" %}
+			<a href="{% url 'view_course' i.id %}">
             <div class="card d-inline-block" style="width: 18rem;">
-			<img src="{% static 'image.png' %}" class="card-img-top" alt="...">
+			<img src="{{i.thumbnail.url}}" class="card-img-top" alt="..." height="250">
 			<div class="card-body">
-				<p class="card-text">{% trans "" %} Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				<p class="card-text" style="text-align:left;">{{i.course_body|slice:":94"}}</p>
 			</div>
 			</div>
-
+			</a>
+			{% endfor %}
             {% for i in product|slice:"1:" %}
+			<a href="{% url 'view_course' i.id %}">
             <div class="card d-inline-block" style="width: 18rem;">
-			<img src="{% static 'image.png' %}" class="card-img-top" alt="...">
+			<img src="{{i.thumbnail.url}}" class="card-img-top" alt="..." height="250">
 			<div class="card-body">
-				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				<p class="card-text" style="text-align:left;">{{i.course_body|slice:":94"}}</p>
 			</div>
 			</div>
-
+			</a>
             {% if forloop.counter|divisibleby:3 and forloop.counter > 0 and not forloop.last %}
              </div><div class="carousel-item">
             {% endif%}

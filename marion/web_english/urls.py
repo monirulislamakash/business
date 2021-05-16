@@ -32,4 +32,5 @@ urlpatterns = [
     path('updateprofile',views.updateprofile,name="updateprofile" ),
     path('details_blog/<int:id>/', views.details_blog, name="details_blog"),
     path('category/<str:category>/', views.category, name="category"),
+    path('view_course/<int:id>/', views.view_course, name="view_course"),
 ]

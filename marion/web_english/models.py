@@ -60,9 +60,10 @@ class AppList(models.Model):
     def __str__(self):
         return self.lists
 class Course(models.Model):
-    course_name=models.CharField(max_length=50)
-    course_body=models.TextField()
+    course_name=models.CharField(max_length=50,default="")
+    course_body=models.TextField(default="")
     thumbnail=models.ImageField(upload_to="static/course_pic/",default="")
+    video=models.FileField(upload_to="static/course_pic/",default="")
 class Content_1(models.Model):
     titel=models.CharField(max_length=100,default="")
     subtitel=models.CharField(max_length=100,default="")
