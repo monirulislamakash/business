@@ -44,27 +44,33 @@
     	</div>
     </div>
     <!--Blog category End-->
-    <!--Contant blog start-->
-    	<div class="blog">
-    		{% for blogpost in blog|slice:":6"%}
-			
-    		<div class="card blog_card">
-    		<a href="{% url 'details_blog' blogpost.id %}" style="text-decoration: none;color: #000;">
-			  <img src="{{blogpost.image.url}}" class="card-img-top" alt="..." style="height:150px;">
-			  <div class="card-body">
-			  	<h5>{{blogpost.titel}}</h5>
-			    <span class="card-text" style="text-align:justify;font-size:12px;">{{blogpost.post|slice:":200"|safe}}</span>
-			  </div><hr>
-			  <div style="padding: 10px;font-size: 14px;padding-top: 0px;padding-bottom: 0px;margin-left: 23%;">
-			  	{{blogpost.date}}
-			  </div>
-			</a>
+   <!--Contant blog start-->
+<div id="blog" class="blog">
+	{% for blogpost in blog|slice:":blogpost.length"%}
+
+	<div id='card' class="card blog_card">
+		<a href="{% url 'details_blog' blogpost.id %}" style="text-decoration: none;color: #000;">
+			<img src="{{blogpost.image.url}}" class="card-img-top" alt="..." style="height:150px;">
+			<div class="card-body">
+				<h5>{{blogpost.titel}}</h5>
+				<span class="card-text"
+					style="text-align:justify;font-size:12px;">{{blogpost.post|slice:":200"|safe}}</span>
 			</div>
-			{% endfor %}
-    	</div>
-    	
-    	<!--Contant blog end-->
-    	<div style="height: 100px; width: 300px; margin-top:10px;margin:0 auto; text-align: center;">
-          <a href="{% url 'allblog' %}"><button style="margin-top: 20px;background: #6435c9;width: 200px;height: 50px;color: #fff;border-radius: 16px;border: none;">{% trans "See more" %}</button></a>
-        </div>
+			<hr>
+			<div style="padding: 10px;font-size: 14px;padding-top: 0px;padding-bottom: 0px;margin-left: 23%;">
+				{{blogpost.date}}
+			</div>
+		</a>
+	</div>
+
+	{% endfor %}
+</div>
+<div id="my-Blog" class="blog"></div>
+<!--Contant blog end-->
+
+<!--Content End-->
+<div style="height: 100px; width: 300px; margin-top:10px;margin:0 auto; text-align: center;">
+	<button id='blog-btn'
+		style="margin-top: 20px; cursor: pointer; background: #6435c9;width: 200px;height: 50px;color: #fff;border-radius: 16px;border: none;">{% trans "See more" %}</button>
+</div>
 {% endblock  %}

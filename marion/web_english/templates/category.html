@@ -6,8 +6,8 @@
 {% endblock  %}
 {% block title %}Blog{% endblock  %}
 {% block body %}
- <!--Slider Start-->
-    <div class="container-fluid slider">
+  <!--Slider Start-->
+    <div class="container-fluid slider" style="max-width:1324px;">
     	<div id="carouselExampleSlidesOnly" class="carousel slide container-fluid" data-bs-ride="carousel">
         <div class="carousel-inner" >
             <div class="carousel-item active ">
@@ -18,7 +18,7 @@
 					<button>{% trans "Check Now" %}</button>
                 </div>
                 <div class="slide_right">
-                	<img src="{{sliderhead.slide_image}}">
+                	<img src="{{sliderhead.slide_image.url}}">
                 </div>
 			{% endfor %}
             </div>
@@ -27,13 +27,13 @@
     </div>
     <!--Slider End-->
     <!--Content Start-->
-    <div class="container">
+    <div class="container" style="max-width:1324px;">
     	<div class="content_titel col-sm-12">
     	{% trans "Blog Category" %}	 {% for i in blog|slice:':1' %}"{{i.category}}"{% endfor %}
     	</div>
     </div>
     <!--Blog category Start-->
-    <div class="container-fluid">
+    <div class="container-fluid" style="max-width:1324px;">
     	<div class="category">
     		<ul>
     			<li><a href="{% url 'blog' %}"> Letest</a></li>
