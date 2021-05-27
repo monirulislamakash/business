@@ -416,8 +416,26 @@ body{
 	padding: 50px;
 	margin-bottom:30px;
 }
-
-
+.what_you_larn{
+	background: #fbfbf8;
+    border: 1px solid #dcdacb;
+    border-radius: 4px;
+    padding:20px;
+    text-align:left;
+}
+.what_you_larn h3{
+	font-weight: bold;
+	color: #565656;
+}
+.what_you_larn ul li{
+	background: url(icon/listbullet.png) left 11px no-repeat;
+    background-size: 14px;
+    padding: 5px 20px 5px 30px;
+    list-style-type: none;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+}
 
 /* Responsive Sections*/
 @media only screen and (max-width: 759px) {

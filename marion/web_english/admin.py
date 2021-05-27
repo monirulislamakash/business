@@ -5,13 +5,14 @@ from modeltranslation.admin import TranslationAdmin, TranslationTabularInline
 # Register your models here.
 class BlogAdmin(TranslationAdmin):
     model = Blog
-
+class Head_titelAdmin(TranslationAdmin):
+    model = Head_titel
+admin.site.register(Category)
 admin.site.register(Blog)
 admin.site.register(Subscription)
 admin.site.register(Our_team)
 admin.site.register(Brand_logo)
 admin.site.register(Head_titel)
-admin.site.register(Category)
 admin.site.register(ProfilUpdate)
 admin.site.register(Android_stor)
 admin.site.register(App_Category)

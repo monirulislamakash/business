@@ -4,9 +4,13 @@ from ckeditor.fields import RichTextField
 from django.contrib.auth.models import User
 from django.contrib import auth
 # Create your models here.
+class Category(models.Model):
+    category=models.CharField(max_length=50)
+    def __str__(self):
+        return self.category
 class Blog(models.Model):
     titel=models.CharField(max_length=50)
-    category=models.CharField(max_length=50)
+    category=models.ForeignKey(Category,on_delete=models.CASCADE,primary_key=True,default=1)
     image=models.ImageField(upload_to="static/blog_image/")
     post=RichTextField(blank=True,null=True)
     date=models.DateTimeField(default=datetime.now())
@@ -34,10 +38,7 @@ class Head_titel(models.Model):
     subtitel=models.CharField(max_length=200,default="")
     button_link=models.CharField(max_length=200,default="")
     slide_image=models.ImageField(upload_to="static/slide_image/",default="")
-class Category(models.Model):
-    category=models.CharField(max_length=50)
-    def __str__(self):
-        return self.category
+
 class ProfilUpdate(models.Model):
     user=models.OneToOneField(User,on_delete=models.CASCADE,primary_key=True)
     image=models.ImageField(upload_to="static/profile/",default="static/propic/pro_avter.png")
@@ -61,7 +62,7 @@ class AppList(models.Model):
         return self.lists
 class Course(models.Model):
     course_name=models.CharField(max_length=50,default="")
-    course_body=models.TextField(default="")
+    course_body=RichTextField(blank=True,null=True)
     thumbnail=models.ImageField(upload_to="static/course_pic/",default="")
     video=models.FileField(upload_to="static/course_pic/",default="")
 class Content_1(models.Model):
